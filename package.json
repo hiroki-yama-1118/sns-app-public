@@ -6,6 +6,7 @@
     "build": "next build",
     "start": "next start",
     "test": "jest --env=jsdom --verbose",
+    "test:ci":"jest --coverage --silent --ci",
     "lint": "next lint",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
