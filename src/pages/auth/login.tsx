@@ -39,6 +39,7 @@ const Login: NextPage = () => {
       </div>
       <div className="flex gap-3 mt-10">
         <Button
+        data-testid="login"
           label="ログイン"
           backgroundColor="#f28728"
           color="white"

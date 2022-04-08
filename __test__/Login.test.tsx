@@ -42,7 +42,7 @@ describe("ログイン画面のテスト", () => {
     userEvent.type(screen.getByPlaceholderText("メールアドレス"), "user1");
     userEvent.type(
       screen.getByPlaceholderText("8文字以上16文字以内"),
-      "dummypw",
+      "dummypw1",
     );
     userEvent.click(screen.getByText("ログイン"));
     expect(await screen.findByText("つぶやき一覧")).toBeInTheDocument();

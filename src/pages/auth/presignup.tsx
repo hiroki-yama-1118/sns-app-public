@@ -30,13 +30,17 @@ const PreSignUp: NextPage = () => {
         </div>
         {isLoading ? (
           <div className="flex justify-center mt-20 w-full h-64">
-            <div className="animate-spin h-8 w-8 bg-basic rounded-xl"></div>
+            <div
+              data-testid="loading"
+              className="animate-spin h-8 w-8 bg-basic rounded-xl"
+            ></div>
           </div>
         ) : (
           <div className="flex flex-col items-center mt-10">
             <div className="lg:flex sm:flex gap-3 w-auto">
               <div className="mt-3">
                 <TextInput
+                  data-testid="first"
                   label="姓"
                   type="text"
                   fullWidth={false}
@@ -48,6 +52,7 @@ const PreSignUp: NextPage = () => {
               </div>
               <div className="mt-3">
                 <TextInput
+                  data-testid="last"
                   label="名"
                   type="text"
                   fullWidth={false}
@@ -61,6 +66,7 @@ const PreSignUp: NextPage = () => {
             <div className="lg:flex sm:flex gap-3 w-auto">
               <div className="mt-3">
                 <TextInput
+                  data-testid="email"
                   label="メールアドレス"
                   type="text"
                   fullWidth={false}
@@ -76,6 +82,7 @@ const PreSignUp: NextPage = () => {
                   selectedOption={selectValue}
                   select={setSelectValue}
                   options={options}
+                  data-testid="domain"
                 />
               </div>
             </div>
